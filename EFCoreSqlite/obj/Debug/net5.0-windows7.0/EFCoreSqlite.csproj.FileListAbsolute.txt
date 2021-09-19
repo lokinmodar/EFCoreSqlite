@@ -1,0 +1,11 @@
+I:\Dante\tataru-to-dalamud\EFCoreSqLite\EFCoreSqlite\EFCoreSqlite\bin\Debug\net5.0-windows7.0\EFCoreSqlite.deps.json
+I:\Dante\tataru-to-dalamud\EFCoreSqLite\EFCoreSqlite\EFCoreSqlite\bin\Debug\net5.0-windows7.0\EFCoreSqlite.dll
+I:\Dante\tataru-to-dalamud\EFCoreSqLite\EFCoreSqlite\EFCoreSqlite\bin\Debug\net5.0-windows7.0\ref\EFCoreSqlite.dll
+I:\Dante\tataru-to-dalamud\EFCoreSqLite\EFCoreSqlite\EFCoreSqlite\bin\Debug\net5.0-windows7.0\EFCoreSqlite.pdb
+I:\Dante\tataru-to-dalamud\EFCoreSqLite\EFCoreSqlite\EFCoreSqlite\obj\Debug\net5.0-windows7.0\EFCoreSqlite.GeneratedMSBuildEditorConfig.editorconfig
+I:\Dante\tataru-to-dalamud\EFCoreSqLite\EFCoreSqlite\EFCoreSqlite\obj\Debug\net5.0-windows7.0\EFCoreSqlite.AssemblyInfoInputs.cache
+I:\Dante\tataru-to-dalamud\EFCoreSqLite\EFCoreSqlite\EFCoreSqlite\obj\Debug\net5.0-windows7.0\EFCoreSqlite.AssemblyInfo.cs
+I:\Dante\tataru-to-dalamud\EFCoreSqLite\EFCoreSqlite\EFCoreSqlite\obj\Debug\net5.0-windows7.0\EFCoreSqlite.csproj.CoreCompileInputs.cache
+I:\Dante\tataru-to-dalamud\EFCoreSqLite\EFCoreSqlite\EFCoreSqlite\obj\Debug\net5.0-windows7.0\EFCoreSqlite.dll
+I:\Dante\tataru-to-dalamud\EFCoreSqLite\EFCoreSqlite\EFCoreSqlite\obj\Debug\net5.0-windows7.0\ref\EFCoreSqlite.dll
+I:\Dante\tataru-to-dalamud\EFCoreSqLite\EFCoreSqlite\EFCoreSqlite\obj\Debug\net5.0-windows7.0\EFCoreSqlite.pdb

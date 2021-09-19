@@ -1,0 +1,12 @@
+I:\Dante\tataru-to-dalamud\Echoglossian\obj\x64\Debug\EFCoreSqlite.deps.json
+I:\Dante\tataru-to-dalamud\Echoglossian\obj\x64\Debug\EFCoreSqlite.dll
+I:\Dante\tataru-to-dalamud\Echoglossian\obj\x64\Debug\EFCoreSqlite.pdb
+I:\Dante\tataru-to-dalamud\Echoglossian\obj\x64\Debug\EFCoreSqlite.xml
+I:\Dante\tataru-to-dalamud\EFCoreSqLite\EFCoreSqlite\EFCoreSqlite\obj\x64\Debug\EFCoreSqlite.GeneratedMSBuildEditorConfig.editorconfig
+I:\Dante\tataru-to-dalamud\EFCoreSqLite\EFCoreSqlite\EFCoreSqlite\obj\x64\Debug\EFCoreSqlite.AssemblyInfoInputs.cache
+I:\Dante\tataru-to-dalamud\EFCoreSqLite\EFCoreSqlite\EFCoreSqlite\obj\x64\Debug\EFCoreSqlite.AssemblyInfo.cs
+I:\Dante\tataru-to-dalamud\EFCoreSqLite\EFCoreSqlite\EFCoreSqlite\obj\x64\Debug\EFCoreSqlite.csproj.CoreCompileInputs.cache
+I:\Dante\tataru-to-dalamud\EFCoreSqLite\EFCoreSqlite\EFCoreSqlite\obj\x64\Debug\EFCoreSqlite.csproj.CopyComplete
+I:\Dante\tataru-to-dalamud\EFCoreSqLite\EFCoreSqlite\EFCoreSqlite\obj\x64\Debug\EFCoreSqlite.dll
+I:\Dante\tataru-to-dalamud\EFCoreSqLite\EFCoreSqlite\EFCoreSqlite\obj\x64\Debug\EFCoreSqlite.xml
+I:\Dante\tataru-to-dalamud\EFCoreSqLite\EFCoreSqlite\EFCoreSqlite\obj\x64\Debug\EFCoreSqlite.pdb

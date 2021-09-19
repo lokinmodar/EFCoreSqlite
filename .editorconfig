@@ -1,0 +1,7 @@
+﻿[*.cs]
+
+# S125: Sections of code should not be commented out
+dotnet_diagnostic.S125.severity = suggestion
+
+# CS1591: Missing XML comment for publicly visible type or member
+dotnet_diagnostic.CS1591.severity = suggestion
