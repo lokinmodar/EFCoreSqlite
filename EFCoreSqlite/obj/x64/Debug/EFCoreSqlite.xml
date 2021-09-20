@@ -4,5 +4,14 @@
         <name>EFCoreSqlite</name>
     </assembly>
     <members>
+        <member name="M:EFCoreSqlite.EchoglossianDbContext.OnConfiguring(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder)">
+            <inheritdoc/>
+        </member>
+        <member name="M:EFCoreSqlite.EchoglossianDbContext.Dispose">
+            <inheritdoc/>
+        </member>
+        <member name="M:EFCoreSqlite.EchoglossianDbContext.DisposeAsync">
+            <inheritdoc/>
+        </member>
     </members>
 </doc>

@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EFCoreSqlite.Migrations
 {
     [DbContext(typeof(EchoglossianDbContext))]
-    [Migration("20210918025628_CreateEchoglossianDB")]
-    partial class CreateEchoglossianDB
+    [Migration("20210920130735_EchoglossianDB")]
+    partial class EchoglossianDB
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -34,7 +34,11 @@ namespace EFCoreSqlite.Migrations
                         .HasMaxLength(400)
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("OriginalLang")
+                    b.Property<string>("OriginalBattleTalkMessageLang")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("OriginalSenderNameLang")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
@@ -44,9 +48,15 @@ namespace EFCoreSqlite.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<string>("TranslatedBattleTalkMessage")
-                        .IsRequired()
                         .HasMaxLength(400)
                         .HasColumnType("TEXT");
+
+                    b.Property<string>("TranslatedSenderName")
+                        .HasMaxLength(100)
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("TranslationEngine")
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("TranslationLang")
                         .IsRequired()
@@ -82,6 +92,10 @@ namespace EFCoreSqlite.Migrations
                         .HasMaxLength(2500)
                         .HasColumnType("TEXT");
 
+                    b.Property<string>("QuestId")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
                     b.Property<string>("QuestName")
                         .IsRequired()
                         .HasMaxLength(200)
@@ -91,6 +105,14 @@ namespace EFCoreSqlite.Migrations
                         .IsRequired()
                         .HasMaxLength(2500)
                         .HasColumnType("TEXT");
+
+                    b.Property<string>("TranslatedQuestName")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("TranslationEngine")
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("TranslationLang")
                         .IsRequired()
@@ -136,7 +158,6 @@ namespace EFCoreSqlite.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<string>("TranslatedSenderName")
-                        .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("TEXT");
 
@@ -144,7 +165,11 @@ namespace EFCoreSqlite.Migrations
                         .HasMaxLength(400)
                         .HasColumnType("TEXT");
 
+                    b.Property<int>("TranslationEngine")
+                        .HasColumnType("INTEGER");
+
                     b.Property<string>("TranslationLang")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<DateTime>("UpdatedDate")
@@ -183,9 +208,11 @@ namespace EFCoreSqlite.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<string>("TranslatedToastMessage")
-                        .IsRequired()
                         .HasMaxLength(200)
                         .HasColumnType("TEXT");
+
+                    b.Property<int>("TranslationEngine")
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("TranslationLang")
                         .IsRequired()

@@ -10,3 +10,7 @@ I:\Dante\tataru-to-dalamud\EFCoreSqLite\EFCoreSqlite\EFCoreSqlite\obj\x64\Debug\
 I:\Dante\tataru-to-dalamud\EFCoreSqLite\EFCoreSqlite\EFCoreSqlite\obj\x64\Debug\EFCoreSqlite.dll
 I:\Dante\tataru-to-dalamud\EFCoreSqLite\EFCoreSqlite\EFCoreSqlite\obj\x64\Debug\EFCoreSqlite.xml
 I:\Dante\tataru-to-dalamud\EFCoreSqLite\EFCoreSqlite\EFCoreSqlite\obj\x64\Debug\EFCoreSqlite.pdb
+I:\Dante\tataru-to-dalamud\EFCoreSqLite\EFCoreSqlite\EFCoreSqlite\obj\x64\Debug\EFCoreSqlite.csproj.AssemblyReference.cache
+I:\Dante\tataru-to-dalamud\Echoglossian\obj\x64\Debug\EFCoreSqlite.runtimeconfig.json
+I:\Dante\tataru-to-dalamud\Echoglossian\obj\x64\Debug\EFCoreSqlite.runtimeconfig.dev.json
+I:\Dante\tataru-to-dalamud\EFCoreSqLite\EFCoreSqlite\EFCoreSqlite\obj\x64\Debug\EFCoreSqlite.genruntimeconfig.cache

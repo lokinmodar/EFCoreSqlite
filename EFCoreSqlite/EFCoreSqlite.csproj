@@ -27,7 +27,7 @@
 
     <Description>EFCore SQlite wrapper</Description>
     <Copyright>Dante Souza e Souza - aka lokinmodar - 2021</Copyright>
-    <PackageProjectUrl>https://github.com/lokinmodar/EFCoreSqlite/</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/lokinmodar/Echoglossian.EFCoreSqlite/</PackageProjectUrl>
   </PropertyGroup>
   <PropertyGroup Label="Documentation">
     <DocumentationFile></DocumentationFile>
@@ -51,6 +51,14 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.10" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="5.0.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.10">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="StyleCop.Analyzers" Version="1.2.0-beta.354">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
   </ItemGroup>
 
 </Project>

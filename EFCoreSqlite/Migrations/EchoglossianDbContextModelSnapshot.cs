@@ -25,34 +25,45 @@ namespace EFCoreSqlite.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .IsConcurrencyToken()
                         .ValueGeneratedOnAddOrUpdate()
-                        .HasColumnType("DATETIME");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("OriginalBattleTalkMessage")
                         .IsRequired()
                         .HasMaxLength(400)
-                        .HasColumnType("VARCHAR");
+                        .HasColumnType("TEXT");
 
-                    b.Property<string>("OriginalLang")
+                    b.Property<string>("OriginalBattleTalkMessageLang")
                         .IsRequired()
-                        .HasColumnType("VARCHAR");
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("OriginalSenderNameLang")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("SenderName")
                         .IsRequired()
                         .HasMaxLength(100)
-                        .HasColumnType("VARCHAR");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("TranslatedBattleTalkMessage")
                         .HasMaxLength(400)
-                        .HasColumnType("VARCHAR");
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("TranslatedSenderName")
+                        .HasMaxLength(100)
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("TranslationEngine")
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("TranslationLang")
                         .IsRequired()
-                        .HasColumnType("VARCHAR");
+                        .HasColumnType("TEXT");
 
                     b.Property<DateTime>("UpdatedDate")
                         .IsConcurrencyToken()
-                        .ValueGeneratedOnUpdate()
-                        .HasColumnType("DATETIME");
+                        .ValueGeneratedOnAddOrUpdate()
+                        .HasColumnType("TEXT");
 
                     b.HasKey("Id");
 
@@ -68,34 +79,47 @@ namespace EFCoreSqlite.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .IsConcurrencyToken()
                         .ValueGeneratedOnAddOrUpdate()
-                        .HasColumnType("DATETIME");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("OriginalLang")
                         .IsRequired()
-                        .HasColumnType("VARCHAR");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("OriginalQuestMessage")
                         .IsRequired()
                         .HasMaxLength(2500)
-                        .HasColumnType("VARCHAR");
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("QuestId")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("QuestName")
                         .IsRequired()
                         .HasMaxLength(200)
-                        .HasColumnType("VARCHAR");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("TranslatedQuestMessage")
+                        .IsRequired()
                         .HasMaxLength(2500)
-                        .HasColumnType("VARCHAR");
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("TranslatedQuestName")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("TranslationEngine")
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("TranslationLang")
                         .IsRequired()
-                        .HasColumnType("VARCHAR");
+                        .HasColumnType("TEXT");
 
                     b.Property<DateTime>("UpdatedDate")
                         .IsConcurrencyToken()
-                        .ValueGeneratedOnUpdate()
-                        .HasColumnType("DATETIME");
+                        .ValueGeneratedOnAddOrUpdate()
+                        .HasColumnType("TEXT");
 
                     b.HasKey("Id");
 
@@ -111,41 +135,45 @@ namespace EFCoreSqlite.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .IsConcurrencyToken()
                         .ValueGeneratedOnAddOrUpdate()
-                        .HasColumnType("DATETIME");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("OriginalSenderNameLang")
                         .IsRequired()
-                        .HasColumnType("VARCHAR");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("OriginalTalkMessage")
                         .IsRequired()
                         .HasMaxLength(400)
-                        .HasColumnType("VARCHAR");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("OriginalTalkMessageLang")
                         .IsRequired()
-                        .HasColumnType("VARCHAR");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("SenderName")
                         .IsRequired()
                         .HasMaxLength(100)
-                        .HasColumnType("VARCHAR");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("TranslatedSenderName")
                         .HasMaxLength(100)
-                        .HasColumnType("VARCHAR");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("TranslatedTalkMessage")
                         .HasMaxLength(400)
-                        .HasColumnType("VARCHAR");
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("TranslationEngine")
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("TranslationLang")
-                        .HasColumnType("VARCHAR");
+                        .IsRequired()
+                        .HasColumnType("TEXT");
 
                     b.Property<DateTime>("UpdatedDate")
                         .IsConcurrencyToken()
-                        .ValueGeneratedOnUpdate()
-                        .HasColumnType("DATETIME");
+                        .ValueGeneratedOnAddOrUpdate()
+                        .HasColumnType("TEXT");
 
                     b.HasKey("Id");
 
@@ -161,34 +189,37 @@ namespace EFCoreSqlite.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .IsConcurrencyToken()
                         .ValueGeneratedOnAddOrUpdate()
-                        .HasColumnType("DATETIME");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("OriginalLang")
                         .IsRequired()
-                        .HasColumnType("VARCHAR");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("OriginalToastMessage")
                         .IsRequired()
                         .HasMaxLength(200)
-                        .HasColumnType("VARCHAR");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("ToastType")
                         .IsRequired()
                         .HasMaxLength(40)
-                        .HasColumnType("VARCHAR");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("TranslatedToastMessage")
                         .HasMaxLength(200)
-                        .HasColumnType("VARCHAR");
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("TranslationEngine")
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("TranslationLang")
                         .IsRequired()
-                        .HasColumnType("VARCHAR");
+                        .HasColumnType("TEXT");
 
                     b.Property<DateTime>("UpdatedDate")
                         .IsConcurrencyToken()
-                        .ValueGeneratedOnUpdate()
-                        .HasColumnType("DATETIME");
+                        .ValueGeneratedOnAddOrUpdate()
+                        .HasColumnType("TEXT");
 
                     b.HasKey("Id");
 

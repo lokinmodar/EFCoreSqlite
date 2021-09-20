@@ -5,7 +5,7 @@
   },
   "projects": {
     "I:\\Dante\\tataru-to-dalamud\\EFCoreSqLite\\EFCoreSqlite\\EFCoreSqlite\\EFCoreSqlite.csproj": {
-      "version": "0.0.2109.144",
+      "version": "0.0.2109.788",
       "restore": {
         "projectUniqueName": "I:\\Dante\\tataru-to-dalamud\\EFCoreSqLite\\EFCoreSqlite\\EFCoreSqlite\\EFCoreSqlite.csproj",
         "projectName": "EFCoreSqlite",
@@ -51,6 +51,18 @@
             "Microsoft.EntityFrameworkCore.Sqlite": {
               "target": "Package",
               "version": "[5.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.10, )"
+            },
+            "StyleCop.Analyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.2.0-beta.354, )"
             }
           },
           "imports": [
