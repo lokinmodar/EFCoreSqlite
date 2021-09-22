@@ -35,15 +35,16 @@ namespace EFCoreSqlite.Models
     [Required]
     public int TranslationEngine { get; set; }
 
-    [Timestamp]
     [Required]
     public DateTime CreatedDate { get; set; }
 
+    public DateTime? UpdatedDate { get; set; }
+
     [Timestamp]
-    public DateTime UpdatedDate { get; set; }
+    public byte[] RowVersion { get; set; }
 
     public ToastMessage(string toastType, string originalToastMessage, string originalLang,
-      string translatedToastMessage, string translationLang, int translationEngine)
+      string translatedToastMessage, string translationLang, int translationEngine, DateTime createdDate, DateTime? updatedDate)
     {
       this.ToastType = toastType;
       this.OriginalToastMessage = originalToastMessage;
@@ -51,7 +52,8 @@ namespace EFCoreSqlite.Models
       this.TranslatedToastMessage = translatedToastMessage;
       this.TranslationLang = translationLang;
       this.TranslationEngine = translationEngine;
-      this.CreatedDate = DateTime.Now;
+      this.CreatedDate = createdDate;
+      this.UpdatedDate = updatedDate;
     }
 
     public override string ToString()

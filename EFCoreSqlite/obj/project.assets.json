@@ -1163,7 +1163,7 @@
     "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
-    "version": "0.0.2109.788",
+    "version": "0.0.2109.222",
     "restore": {
       "projectUniqueName": "I:\\Dante\\tataru-to-dalamud\\EFCoreSqLite\\EFCoreSqlite\\EFCoreSqlite\\EFCoreSqlite.csproj",
       "projectName": "EFCoreSqlite",
@@ -1238,7 +1238,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }

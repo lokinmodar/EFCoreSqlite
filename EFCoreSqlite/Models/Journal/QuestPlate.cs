@@ -44,15 +44,17 @@ namespace EFCoreSqlite.Models.Journal
     [Required]
     public int TranslationEngine { get; set; }
 
-    [Timestamp]
     [Required]
     public DateTime CreatedDate { get; set; }
 
+    public DateTime? UpdatedDate { get; set; }
+
     [Timestamp]
-    public DateTime UpdatedDate { get; set; }
+    public byte[] RowVersion { get; set; }
 
     public QuestPlate(string questName, string originalQuestMessage, string originalLang,
-      string translatedQuestMessage, string translationLang, int translationEngine, string questId, string translatedQuestName)
+      string translatedQuestMessage, string translationLang, int translationEngine, string questId,
+      string translatedQuestName, DateTime createdDate, DateTime? updatedDate)
     {
       this.QuestId = questId;
       this.QuestName = questName;
@@ -62,7 +64,9 @@ namespace EFCoreSqlite.Models.Journal
       this.TranslatedQuestName = translatedQuestName;
       this.TranslationLang = translationLang;
       this.TranslationEngine = translationEngine;
-      this.CreatedDate = DateTime.Now;
+      this.TranslationEngine = translationEngine;
+      this.CreatedDate = createdDate;
+      this.UpdatedDate = updatedDate;
     }
 
     public override string ToString()

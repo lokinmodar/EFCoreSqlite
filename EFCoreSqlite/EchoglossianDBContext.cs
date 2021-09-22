@@ -60,29 +60,5 @@ namespace EFCoreSqlite
       await this.logStream.DisposeAsync();
     }
 
-    /*public override int SaveChanges()
-    {
-      var entries = this.ChangeTracker
-        .Entries()
-        .Where(e => e.Entity is BaseEntity && (
-          e.State == EntityState.Added
-          || e.State == EntityState.Modified));
-      var enumerable = entries as EntityEntry[] ?? entries.ToArray();
-      var entityEntries = entries as EntityEntry[] ?? enumerable.ToArray();
-      File.AppendAllLines($"{Directory.GetParent(Assembly.GetExecutingAssembly().Location)}{Path.DirectorySeparatorChar}dantelog.txt", new[] { "entries antes do foreach", entityEntries.ToString() });
-      foreach (var entityEntry in entityEntries)
-      {
-        ((BaseEntity)entityEntry.Entity).UpdatedDate = DateTime.Now;
-
-        if (entityEntry.State == EntityState.Added)
-        {
-          ((BaseEntity)entityEntry.Entity).CreatedDate = DateTime.Now;
-        }
-      }
-
-      var entityEntries2 = entries as EntityEntry[] ?? enumerable.ToArray();
-      File.AppendAllLines($"{Directory.GetParent(Assembly.GetExecutingAssembly().Location)}{Path.DirectorySeparatorChar}dantelog.txt", new[] { "entries depois do foreach", entityEntries2.ToString() });
-      return base.SaveChanges();
-    }*/
   }
 }

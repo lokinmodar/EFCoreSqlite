@@ -21,8 +21,9 @@ namespace EFCoreSqlite.Migrations
                     TranslatedBattleTalkMessage = table.Column<string>(type: "TEXT", maxLength: 400, nullable: true),
                     TranslationLang = table.Column<string>(type: "TEXT", nullable: false),
                     TranslationEngine = table.Column<int>(type: "INTEGER", nullable: false),
-                    CreatedDate = table.Column<DateTime>(type: "TEXT", rowVersion: true, nullable: false),
-                    UpdatedDate = table.Column<DateTime>(type: "TEXT", rowVersion: true, nullable: false)
+                    CreatedDate = table.Column<DateTime>(type: "TEXT", nullable: false),
+                    UpdatedDate = table.Column<DateTime>(type: "TEXT", nullable: true),
+                    RowVersion = table.Column<byte[]>(type: "BLOB", rowVersion: true, nullable: true)
                 },
                 constraints: table =>
                 {
@@ -43,8 +44,9 @@ namespace EFCoreSqlite.Migrations
                     TranslatedQuestMessage = table.Column<string>(type: "TEXT", maxLength: 2500, nullable: false),
                     TranslationLang = table.Column<string>(type: "TEXT", nullable: false),
                     TranslationEngine = table.Column<int>(type: "INTEGER", nullable: false),
-                    CreatedDate = table.Column<DateTime>(type: "TEXT", rowVersion: true, nullable: false),
-                    UpdatedDate = table.Column<DateTime>(type: "TEXT", rowVersion: true, nullable: false)
+                    CreatedDate = table.Column<DateTime>(type: "TEXT", nullable: false),
+                    UpdatedDate = table.Column<DateTime>(type: "TEXT", nullable: true),
+                    RowVersion = table.Column<byte[]>(type: "BLOB", rowVersion: true, nullable: true)
                 },
                 constraints: table =>
                 {
@@ -65,8 +67,9 @@ namespace EFCoreSqlite.Migrations
                     TranslatedTalkMessage = table.Column<string>(type: "TEXT", maxLength: 400, nullable: true),
                     TranslationLang = table.Column<string>(type: "TEXT", nullable: false),
                     TranslationEngine = table.Column<int>(type: "INTEGER", nullable: false),
-                    CreatedDate = table.Column<DateTime>(type: "TEXT", rowVersion: true, nullable: false),
-                    UpdatedDate = table.Column<DateTime>(type: "TEXT", rowVersion: true, nullable: false)
+                    CreatedDate = table.Column<DateTime>(type: "TEXT", nullable: false),
+                    UpdatedDate = table.Column<DateTime>(type: "TEXT", nullable: true),
+                    RowVersion = table.Column<byte[]>(type: "BLOB", rowVersion: true, nullable: true)
                 },
                 constraints: table =>
                 {
@@ -85,8 +88,9 @@ namespace EFCoreSqlite.Migrations
                     TranslatedToastMessage = table.Column<string>(type: "TEXT", maxLength: 200, nullable: true),
                     TranslationLang = table.Column<string>(type: "TEXT", nullable: false),
                     TranslationEngine = table.Column<int>(type: "INTEGER", nullable: false),
-                    CreatedDate = table.Column<DateTime>(type: "TEXT", rowVersion: true, nullable: false),
-                    UpdatedDate = table.Column<DateTime>(type: "TEXT", rowVersion: true, nullable: false)
+                    CreatedDate = table.Column<DateTime>(type: "TEXT", nullable: false),
+                    UpdatedDate = table.Column<DateTime>(type: "TEXT", nullable: true),
+                    RowVersion = table.Column<byte[]>(type: "BLOB", rowVersion: true, nullable: true)
                 },
                 constraints: table =>
                 {

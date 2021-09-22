@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EFCoreSqlite.Migrations
 {
     [DbContext(typeof(EchoglossianDbContext))]
-    [Migration("20210920130735_EchoglossianDB")]
+    [Migration("20210922032558_EchoglossianDB")]
     partial class EchoglossianDB
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -25,8 +25,6 @@ namespace EFCoreSqlite.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<DateTime>("CreatedDate")
-                        .IsConcurrencyToken()
-                        .ValueGeneratedOnAddOrUpdate()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("OriginalBattleTalkMessage")
@@ -41,6 +39,11 @@ namespace EFCoreSqlite.Migrations
                     b.Property<string>("OriginalSenderNameLang")
                         .IsRequired()
                         .HasColumnType("TEXT");
+
+                    b.Property<byte[]>("RowVersion")
+                        .IsConcurrencyToken()
+                        .ValueGeneratedOnAddOrUpdate()
+                        .HasColumnType("BLOB");
 
                     b.Property<string>("SenderName")
                         .IsRequired()
@@ -62,9 +65,7 @@ namespace EFCoreSqlite.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<DateTime>("UpdatedDate")
-                        .IsConcurrencyToken()
-                        .ValueGeneratedOnAddOrUpdate()
+                    b.Property<DateTime?>("UpdatedDate")
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");
@@ -79,8 +80,6 @@ namespace EFCoreSqlite.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<DateTime>("CreatedDate")
-                        .IsConcurrencyToken()
-                        .ValueGeneratedOnAddOrUpdate()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("OriginalLang")
@@ -101,6 +100,11 @@ namespace EFCoreSqlite.Migrations
                         .HasMaxLength(200)
                         .HasColumnType("TEXT");
 
+                    b.Property<byte[]>("RowVersion")
+                        .IsConcurrencyToken()
+                        .ValueGeneratedOnAddOrUpdate()
+                        .HasColumnType("BLOB");
+
                     b.Property<string>("TranslatedQuestMessage")
                         .IsRequired()
                         .HasMaxLength(2500)
@@ -118,9 +122,7 @@ namespace EFCoreSqlite.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<DateTime>("UpdatedDate")
-                        .IsConcurrencyToken()
-                        .ValueGeneratedOnAddOrUpdate()
+                    b.Property<DateTime?>("UpdatedDate")
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");
@@ -135,8 +137,6 @@ namespace EFCoreSqlite.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<DateTime>("CreatedDate")
-                        .IsConcurrencyToken()
-                        .ValueGeneratedOnAddOrUpdate()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("OriginalSenderNameLang")
@@ -151,6 +151,11 @@ namespace EFCoreSqlite.Migrations
                     b.Property<string>("OriginalTalkMessageLang")
                         .IsRequired()
                         .HasColumnType("TEXT");
+
+                    b.Property<byte[]>("RowVersion")
+                        .IsConcurrencyToken()
+                        .ValueGeneratedOnAddOrUpdate()
+                        .HasColumnType("BLOB");
 
                     b.Property<string>("SenderName")
                         .IsRequired()
@@ -172,9 +177,7 @@ namespace EFCoreSqlite.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<DateTime>("UpdatedDate")
-                        .IsConcurrencyToken()
-                        .ValueGeneratedOnAddOrUpdate()
+                    b.Property<DateTime?>("UpdatedDate")
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");
@@ -189,8 +192,6 @@ namespace EFCoreSqlite.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<DateTime>("CreatedDate")
-                        .IsConcurrencyToken()
-                        .ValueGeneratedOnAddOrUpdate()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("OriginalLang")
@@ -201,6 +202,11 @@ namespace EFCoreSqlite.Migrations
                         .IsRequired()
                         .HasMaxLength(200)
                         .HasColumnType("TEXT");
+
+                    b.Property<byte[]>("RowVersion")
+                        .IsConcurrencyToken()
+                        .ValueGeneratedOnAddOrUpdate()
+                        .HasColumnType("BLOB");
 
                     b.Property<string>("ToastType")
                         .IsRequired()
@@ -218,9 +224,7 @@ namespace EFCoreSqlite.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<DateTime>("UpdatedDate")
-                        .IsConcurrencyToken()
-                        .ValueGeneratedOnAddOrUpdate()
+                    b.Property<DateTime?>("UpdatedDate")
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");

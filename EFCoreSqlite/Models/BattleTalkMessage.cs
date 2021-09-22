@@ -41,14 +41,17 @@ namespace EFCoreSqlite.Models
     [Required]
     public int TranslationEngine { get; set; }
 
-    [Timestamp]
     [Required]
     public DateTime CreatedDate { get; set; }
 
-    [Timestamp]
-    public DateTime UpdatedDate { get; set; }
+    public DateTime? UpdatedDate { get; set; }
 
-    public BattleTalkMessage(string senderName, string originalBattleTalkMessage, string originalBattleTalkMessageLang, string originalSenderNameLang, string translatedSenderName, string translatedBattleTalkMessage, string translationLang, int translationEngine)
+    [Timestamp]
+    public byte[] RowVersion { get; set; }
+
+    public BattleTalkMessage(string senderName, string originalBattleTalkMessage, string originalBattleTalkMessageLang,
+      string originalSenderNameLang, string translatedSenderName, string translatedBattleTalkMessage,
+      string translationLang, int translationEngine, DateTime createdDate, DateTime? updatedDate)
     {
       this.SenderName = senderName;
       this.OriginalBattleTalkMessage = originalBattleTalkMessage;
@@ -58,7 +61,9 @@ namespace EFCoreSqlite.Models
       this.TranslatedBattleTalkMessage = translatedBattleTalkMessage;
       this.TranslationLang = translationLang;
       this.TranslationEngine = translationEngine;
-      this.CreatedDate = DateTime.Now;
+      this.TranslationEngine = translationEngine;
+      this.CreatedDate = createdDate;
+      this.UpdatedDate = updatedDate;
     }
 
     public override string ToString()
