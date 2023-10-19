@@ -3,21 +3,20 @@
 // Licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International Public License license.
 // </copyright>
 
-using System;
 using System.IO;
-using System.Linq;
-using System.Reflection;
 using System.Threading.Tasks;
 
-using EFCoreSqlite.Models;
-using EFCoreSqlite.Models.Journal;
+using Echoglossian.EFCoreSqlite.Models;
+using Echoglossian.EFCoreSqlite.Models.Journal;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.ChangeTracking;
+using Microsoft.Extensions.Logging;
 
-namespace EFCoreSqlite
+namespace Echoglossian.EFCoreSqlite
 {
   public class EchoglossianDbContext : DbContext
   {
+    public DbSet<TalkSubtitleMessage> TalkSubtitleMessage { get; set; }
+
     public DbSet<ToastMessage> ToastMessage { get; set; }
 
     public DbSet<TalkMessage> TalkMessage { get; set; }
@@ -28,37 +27,47 @@ namespace EFCoreSqlite
 
     public string DbPath { get; }
 
-    public EchoglossianDbContext()
+#if DEBUG
+    private StreamWriter LogStream { get; set; }
+
+#endif
+
+    /// <summary>
+    /// Initializes a new instance of the <see cref="EchoglossianDbContext"/> class.
+    /// </summary>
+    /// <param name="configDir"></param>
+    public EchoglossianDbContext(string configDir)
     {
-      var dbPath = Directory.GetParent(Assembly.GetExecutingAssembly().Location)?.ToString();
-      this.DbPath = $"{dbPath}{Path.DirectorySeparatorChar}Echoglossian.db";
+      this.DbPath = $"{configDir}Echoglossian.db";
+#if DEBUG
+      this.LogStream = new StreamWriter($"{configDir}DBContextLog.txt", append: true);
+#endif
     }
 
     // The following configures EF to create a Sqlite database file in the
     // special "local" folder for your platform.
-
-    /// <inheritdoc/>
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
       optionsBuilder.UseSqlite($"Data Source={this.DbPath}");
-      optionsBuilder.LogTo(this.logStream.WriteLine).EnableSensitiveDataLogging().EnableDetailedErrors();
+#if DEBUG
+      optionsBuilder.LogTo(this.LogStream.WriteLine, LogLevel.Trace).EnableSensitiveDataLogging().EnableDetailedErrors();
+#endif
     }
 
-    private readonly StreamWriter logStream = new($"{Directory.GetParent(Assembly.GetExecutingAssembly().Location)}{Path.DirectorySeparatorChar}dantecontextlog.txt", append: true);
-
-    /// <inheritdoc/>
     public override void Dispose()
     {
       base.Dispose();
-      this.logStream.Dispose();
+#if DEBUG
+      this.LogStream.Dispose();
+#endif
     }
 
-    /// <inheritdoc/>
     public override async ValueTask DisposeAsync()
     {
       await base.DisposeAsync();
-      await this.logStream.DisposeAsync();
+#if DEBUG
+      await this.LogStream.DisposeAsync();
+#endif
     }
-
   }
 }

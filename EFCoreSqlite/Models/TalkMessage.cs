@@ -7,7 +7,7 @@ using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace EFCoreSqlite.Models
+namespace Echoglossian.EFCoreSqlite.Models
 {
   [Table("talkmessages")]
   public class TalkMessage
@@ -49,6 +49,19 @@ namespace EFCoreSqlite.Models
     [Timestamp]
     public byte[] RowVersion { get; set; }
 
+    /// <summary>
+    /// Initializes a new instance of the <see cref="TalkMessage"/> class.
+    /// </summary>
+    /// <param name="senderName"></param>
+    /// <param name="originalTalkMessage"></param>
+    /// <param name="originalTalkMessageLang"></param>
+    /// <param name="originalSenderNameLang"></param>
+    /// <param name="translatedSenderName"></param>
+    /// <param name="translatedTalkMessage"></param>
+    /// <param name="translationLang"></param>
+    /// <param name="translationEngine"></param>
+    /// <param name="createdDate"></param>
+    /// <param name="updatedDate"></param>
     public TalkMessage(string senderName, string originalTalkMessage, string originalTalkMessageLang, string originalSenderNameLang, string translatedSenderName, string translatedTalkMessage, string translationLang, int translationEngine, DateTime createdDate, DateTime? updatedDate)
     {
       this.SenderName = senderName;
@@ -69,6 +82,5 @@ namespace EFCoreSqlite.Models
       return
         $"Id: {this.Id}, Sender: {this.SenderName}, OriginalMsg: {this.OriginalTalkMessage}, OriginalLang: {this.OriginalTalkMessageLang}, OriginalSenderNameLang: {this.OriginalSenderNameLang}, TranslatedName: {this.TranslatedSenderName}, TranslMsg: {this.TranslatedTalkMessage}, TransLang: {this.TranslationLang}, TranEngine: {this.TranslationEngine}, CreatedAt: {this.CreatedDate}, UpdatedAt: {this.UpdatedDate}";
     }
-
   }
 }
