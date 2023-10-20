@@ -7,7 +7,7 @@ using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Echoglossian.EFCoreSqlite.Models
+namespace EFCoreSqlite.Models
 {
   [Table("battletalkmessages")]
   public class BattleTalkMessage

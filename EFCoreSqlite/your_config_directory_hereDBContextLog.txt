@@ -1,0 +1,66 @@
+warn: 19/10/2023 22:59:27.018 CoreEventId.SensitiveDataLoggingEnabledWarning[10400] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+dbug: 19/10/2023 22:59:27.147 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 7.0.12 initialized 'EchoglossianDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:7.0.12' with options: SensitiveDataLoggingEnabled DetailedErrorsEnabled 
+dbug: 19/10/2023 22:59:27.344 CoreEventId.ContextDisposed[10407] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      'EchoglossianDbContext' disposed.
+warn: 19/10/2023 23:08:29.240 CoreEventId.SensitiveDataLoggingEnabledWarning[10400] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+dbug: 19/10/2023 23:08:29.367 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 7.0.12 initialized 'EchoglossianDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:7.0.12' with options: SensitiveDataLoggingEnabled DetailedErrorsEnabled 
+dbug: 19/10/2023 23:08:29.600 CoreEventId.ContextDisposed[10407] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      'EchoglossianDbContext' disposed.
+warn: 19/10/2023 23:12:19.137 CoreEventId.SensitiveDataLoggingEnabledWarning[10400] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+dbug: 19/10/2023 23:12:19.268 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 7.0.12 initialized 'EchoglossianDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:7.0.12' with options: SensitiveDataLoggingEnabled DetailedErrorsEnabled 
+dbug: 19/10/2023 23:12:19.407 CoreEventId.ContextDisposed[10407] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      'EchoglossianDbContext' disposed.
+warn: 19/10/2023 23:12:52.300 CoreEventId.SensitiveDataLoggingEnabledWarning[10400] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+dbug: 19/10/2023 23:12:52.420 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 7.0.12 initialized 'EchoglossianDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:7.0.12' with options: SensitiveDataLoggingEnabled DetailedErrorsEnabled 
+dbug: 19/10/2023 23:12:52.585 RelationalEventId.ConnectionCreating[20005] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Creating DbConnection.
+dbug: 19/10/2023 23:12:52.606 RelationalEventId.ConnectionCreated[20006] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Created DbConnection. (32ms).
+dbug: 19/10/2023 23:12:52.612 RelationalEventId.ConnectionOpening[20000] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opening connection to database 'main' on server 'your_config_directory_heredb'.
+dbug: 19/10/2023 23:12:52.669 RelationalEventId.ConnectionError[20004] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      An error occurred using the connection to database 'main' on server 'your_config_directory_heredb'.
+dbug: 19/10/2023 23:12:52.671 RelationalEventId.ConnectionDisposing[20007] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Disposing connection to database 'main' on server 'your_config_directory_heredb'.
+dbug: 19/10/2023 23:12:52.675 RelationalEventId.ConnectionDisposed[20008] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Disposed connection to database 'main' on server 'your_config_directory_heredb' (1ms).
+dbug: 19/10/2023 23:12:52.693 CoreEventId.ContextDisposed[10407] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      'EchoglossianDbContext' disposed.
+warn: 19/10/2023 23:13:07.701 CoreEventId.SensitiveDataLoggingEnabledWarning[10400] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+dbug: 19/10/2023 23:13:07.816 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 7.0.12 initialized 'EchoglossianDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:7.0.12' with options: SensitiveDataLoggingEnabled DetailedErrorsEnabled 
+dbug: 19/10/2023 23:13:07.958 CoreEventId.ContextDisposed[10407] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      'EchoglossianDbContext' disposed.
+warn: 19/10/2023 23:13:38.202 CoreEventId.SensitiveDataLoggingEnabledWarning[10400] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+dbug: 19/10/2023 23:13:38.331 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 7.0.12 initialized 'EchoglossianDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:7.0.12' with options: SensitiveDataLoggingEnabled DetailedErrorsEnabled 
+dbug: 19/10/2023 23:13:38.455 RelationalEventId.ConnectionCreating[20005] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Creating DbConnection.
+dbug: 19/10/2023 23:13:38.465 RelationalEventId.ConnectionCreated[20006] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Created DbConnection. (11ms).
+dbug: 19/10/2023 23:13:38.472 RelationalEventId.ConnectionOpening[20000] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opening connection to database 'main' on server 'your_config_directory_heredb'.
+dbug: 19/10/2023 23:13:38.481 RelationalEventId.ConnectionError[20004] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      An error occurred using the connection to database 'main' on server 'your_config_directory_heredb'.
+dbug: 19/10/2023 23:13:38.482 RelationalEventId.ConnectionDisposing[20007] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Disposing connection to database 'main' on server 'your_config_directory_heredb'.
+dbug: 19/10/2023 23:13:38.486 RelationalEventId.ConnectionDisposed[20008] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Disposed connection to database 'main' on server 'your_config_directory_heredb' (0ms).
+dbug: 19/10/2023 23:13:38.508 CoreEventId.ContextDisposed[10407] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      'EchoglossianDbContext' disposed.
+warn: 19/10/2023 23:14:02.085 CoreEventId.SensitiveDataLoggingEnabledWarning[10400] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+dbug: 19/10/2023 23:14:02.203 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 7.0.12 initialized 'EchoglossianDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:7.0.12' with options: SensitiveDataLoggingEnabled DetailedErrorsEnabled 
+dbug: 19/10/2023 23:14:02.347 CoreEventId.ContextDisposed[10407] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      'EchoglossianDbContext' disposed.

@@ -6,12 +6,12 @@
 using System.IO;
 using System.Threading.Tasks;
 
-using Echoglossian.EFCoreSqlite.Models;
-using Echoglossian.EFCoreSqlite.Models.Journal;
+using EFCoreSqlite.Models;
+using EFCoreSqlite.Models.Journal;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 
-namespace Echoglossian.EFCoreSqlite
+namespace EFCoreSqlite
 {
   public class EchoglossianDbContext : DbContext
   {
@@ -24,6 +24,10 @@ namespace Echoglossian.EFCoreSqlite
     public DbSet<BattleTalkMessage> BattleTalkMessage { get; set; }
 
     public DbSet<QuestPlate> QuestPlate { get; set; }
+
+    public DbSet<LocationName> QuestPlateMessage { get; set; }
+
+
 
     public string DbPath { get; }
 
@@ -38,7 +42,7 @@ namespace Echoglossian.EFCoreSqlite
     /// <param name="configDir"></param>
     public EchoglossianDbContext(string configDir)
     {
-      this.DbPath = $"{configDir}Echoglossian.db";
+      this.DbPath = $"{configDir}db";
 #if DEBUG
       this.LogStream = new StreamWriter($"{configDir}DBContextLog.txt", append: true);
 #endif

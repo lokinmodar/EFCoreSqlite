@@ -4,14 +4,107 @@
         <name>EFCoreSqlite</name>
     </assembly>
     <members>
-        <member name="M:EFCoreSqlite.EchoglossianDbContext.OnConfiguring(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder)">
-            <inheritdoc/>
+        <member name="M:EFCoreSqlite.EchoglossianDbContext.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EFCoreSqlite.EchoglossianDbContext"/> class.
+            </summary>
+            <param name="configDir"></param>
         </member>
-        <member name="M:EFCoreSqlite.EchoglossianDbContext.Dispose">
-            <inheritdoc/>
+        <member name="M:EFCoreSqlite.Models.BattleTalkMessage.#ctor(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.Int32,System.DateTime,System.Nullable{System.DateTime})">
+            <summary>
+            Initializes a new instance of the <see cref="T:EFCoreSqlite.Models.BattleTalkMessage"/> class.
+            </summary>
+            <param name="senderName"></param>
+            <param name="originalBattleTalkMessage"></param>
+            <param name="originalBattleTalkMessageLang"></param>
+            <param name="originalSenderNameLang"></param>
+            <param name="translatedSenderName"></param>
+            <param name="translatedBattleTalkMessage"></param>
+            <param name="translationLang"></param>
+            <param name="translationEngine"></param>
+            <param name="createdDate"></param>
+            <param name="updatedDate"></param>
         </member>
-        <member name="M:EFCoreSqlite.EchoglossianDbContext.DisposeAsync">
-            <inheritdoc/>
+        <member name="M:EFCoreSqlite.Models.Journal.QuestPlate.#ctor(System.String,System.String,System.String,System.String,System.String,System.Int32,System.String,System.String,System.DateTime,System.Nullable{System.DateTime})">
+            <summary>
+            Initializes a new instance of the <see cref="T:EFCoreSqlite.Models.Journal.QuestPlate"/> class.
+            </summary>
+            <param name="questName"></param>
+            <param name="originalQuestMessage"></param>
+            <param name="originalLang"></param>
+            <param name="translatedQuestMessage"></param>
+            <param name="translationLang"></param>
+            <param name="translationEngine"></param>
+            <param name="questId"></param>
+            <param name="translatedQuestName"></param>
+            <param name="createdDate"></param>
+            <param name="updatedDate"></param>
+        </member>
+        <member name="M:EFCoreSqlite.Models.LocationNames.#ctor(System.Int32,System.String,System.String,System.String,System.String,System.Int32,System.DateTime,System.Nullable{System.DateTime})">
+            <summary>
+            Initializes a new instance of the <see cref="T:EFCoreSqlite.Models.LocationNames"/> class.
+            </summary>
+            <param name="id"></param>
+            <param name="originalLocationName"></param>
+            <param name="originalLocationNameLang"></param>
+            <param name="translatedLocationName"></param>
+            <param name="translationLang"></param>
+            <param name="translationEngine"></param>
+            <param name="createdDate"></param>
+            <param name="updatedDate"></param>
+        </member>
+        <member name="M:EFCoreSqlite.Models.NpcNames.#ctor(System.Int32,System.String,System.String,System.String,System.String,System.Int32,System.DateTime,System.Nullable{System.DateTime})">
+            <summary>
+            Initializes a new instance of the <see cref="T:EFCoreSqlite.Models.NpcNames"/> class.
+            </summary>
+            <param name="id"></param>
+            <param name="originalNpcName"></param>
+            <param name="originalNpcNameLang"></param>
+            <param name="translatedNpcName"></param>
+            <param name="translationLang"></param>
+            <param name="translationEngine"></param>
+            <param name="createdDate"></param>
+            <param name="updatedDate"></param>
+        </member>
+        <member name="M:EFCoreSqlite.Models.TalkMessage.#ctor(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.Int32,System.DateTime,System.Nullable{System.DateTime})">
+            <summary>
+            Initializes a new instance of the <see cref="T:EFCoreSqlite.Models.TalkMessage"/> class.
+            </summary>
+            <param name="senderName"></param>
+            <param name="originalTalkMessage"></param>
+            <param name="originalTalkMessageLang"></param>
+            <param name="originalSenderNameLang"></param>
+            <param name="translatedSenderName"></param>
+            <param name="translatedTalkMessage"></param>
+            <param name="translationLang"></param>
+            <param name="translationEngine"></param>
+            <param name="createdDate"></param>
+            <param name="updatedDate"></param>
+        </member>
+        <member name="M:EFCoreSqlite.Models.TalkSubtitleMessage.#ctor(System.String,System.String,System.String,System.String,System.Int32,System.DateTime,System.Nullable{System.DateTime})">
+            <summary>
+            Initializes a new instance of the <see cref="T:EFCoreSqlite.Models.TalkSubtitleMessage"/> class.
+            </summary>
+            <param name="originalTalkSubtitleMessage"></param>
+            <param name="originalTalkSubtitleMessageLang"></param>
+            <param name="translatedTalkSubtitleMessage"></param>
+            <param name="translationLang"></param>
+            <param name="translationEngine"></param>
+            <param name="createdDate"></param>
+            <param name="updatedDate"></param>
+        </member>
+        <member name="M:EFCoreSqlite.Models.ToastMessage.#ctor(System.String,System.String,System.String,System.String,System.String,System.Int32,System.DateTime,System.Nullable{System.DateTime})">
+            <summary>
+            Initializes a new instance of the <see cref="T:EFCoreSqlite.Models.ToastMessage"/> class.
+            </summary>
+            <param name="toastType"></param>
+            <param name="originalToastMessage"></param>
+            <param name="originalLang"></param>
+            <param name="translatedToastMessage"></param>
+            <param name="translationLang"></param>
+            <param name="translationEngine"></param>
+            <param name="createdDate"></param>
+            <param name="updatedDate"></param>
         </member>
     </members>
 </doc>

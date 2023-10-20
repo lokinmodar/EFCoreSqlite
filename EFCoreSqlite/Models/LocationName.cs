@@ -8,21 +8,21 @@ using System.Threading.Tasks;
 
 namespace EFCoreSqlite.Models
 {
-  [Table("npcnames")]
-  public class NpcNames
+  [Table("LocationNames")]
+  public class LocationName
   {
     [Key]
     public int Id { get; set; }
 
     [Required]
     [MaxLength(400)]
-    public string OriginalNpcName { get; set; }
+    public string OriginalLocationName { get; set; }
 
     [Required]
-    public string OriginalNpcNameLang { get; set; }
+    public string OriginalLocationNameLang { get; set; }
 
-    [MaxLength(400)]
-    public string TranslatedNpcName { get; set; }
+    [Required]
+    public string TranslatedLocationName { get; set; }
 
     [Required]
     public string TranslationLang { get; set; }
@@ -39,22 +39,22 @@ namespace EFCoreSqlite.Models
     public byte[] RowVersion { get; set; }
 
     /// <summary>
-    /// Initializes a new instance of the <see cref="NpcNames"/> class.
+    /// Initializes a new instance of the <see cref="LocationName"/> class.
     /// </summary>
     /// <param name="id"></param>
-    /// <param name="originalNpcName"></param>
-    /// <param name="originalNpcNameLang"></param>
-    /// <param name="translatedNpcName"></param>
+    /// <param name="originalLocationName"></param>
+    /// <param name="originalLocationNameLang"></param>
+    /// <param name="translatedLocationName"></param>
     /// <param name="translationLang"></param>
     /// <param name="translationEngine"></param>
     /// <param name="createdDate"></param>
     /// <param name="updatedDate"></param>
-    public NpcNames(int id, string originalNpcName, string originalNpcNameLang, string translatedNpcName, string translationLang, int translationEngine, DateTime createdDate, DateTime? updatedDate)
+    public LocationName(int id, string originalLocationName, string originalLocationNameLang, string translatedLocationName, string translationLang, int translationEngine, DateTime createdDate, DateTime? updatedDate)
     {
       this.Id = id;
-      this.OriginalNpcName = originalNpcName;
-      this.OriginalNpcNameLang = originalNpcNameLang;
-      this.TranslatedNpcName = translatedNpcName;
+      this.OriginalLocationName = originalLocationName;
+      this.OriginalLocationNameLang = originalLocationNameLang;
+      this.TranslatedLocationName = translatedLocationName;
       this.TranslationLang = translationLang;
       this.TranslationEngine = translationEngine;
       this.CreatedDate = createdDate;
@@ -65,9 +65,9 @@ namespace EFCoreSqlite.Models
     {
       return
         $"Id: {this.Id}, " +
-        $"OriginalNpcName: {this.OriginalNpcName}, " +
-        $"OriginalNpcNameLang: {this.OriginalNpcNameLang}, " +
-        $"TranslatedNpcName: {this.TranslatedNpcName}, " +
+        $"OriginalLocationName: {this.OriginalLocationName}, " +
+        $"OriginalLocationNameLang: {this.OriginalLocationNameLang}, " +
+        $"TranslatedLocationName: {this.TranslatedLocationName}, " +
         $"TranslationLang: {this.TranslationLang}, " +
         $"TranslationEngine: {this.TranslationEngine}, " +
         $"CreatedDate: {this.CreatedDate}, " +

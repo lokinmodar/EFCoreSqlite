@@ -7,9 +7,9 @@ using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Echoglossian.EFCoreSqlite.Models
+namespace EFCoreSqlite.Models
 {
-  [Table("TalkSubtitleMessages")]
+  [Table("talksubtitlemessages")]
   public class TalkSubtitleMessage
   {
     [Key]
@@ -60,6 +60,7 @@ namespace Echoglossian.EFCoreSqlite.Models
       this.TranslationEngine = translationEngine;
       this.CreatedDate = createdDate;
       this.UpdatedDate = updatedDate;
+
     }
 
     public override string ToString()

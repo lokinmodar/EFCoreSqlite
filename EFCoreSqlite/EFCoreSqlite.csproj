@@ -23,7 +23,7 @@
 
     <Description>EFCore SQlite wrapper</Description>
     <Copyright>Dante Souza e Souza - aka lokinmodar - 2021</Copyright>
-    <PackageProjectUrl>https://github.com/lokinmodar/Echoglossian.EFCoreSqlite/</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/lokinmodar/EFCoreSqlite/</PackageProjectUrl>
   </PropertyGroup>
   <PropertyGroup Label="Documentation">
     <DocumentationFile></DocumentationFile>

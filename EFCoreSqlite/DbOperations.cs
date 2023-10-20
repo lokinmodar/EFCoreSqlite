@@ -23,13 +23,13 @@ namespace EFCoreSqlite
 
     public void CreateOrUseDb()
     {
-      using var context = new EchoglossianDbContext();
+      using var context = new EchoglossianDbContext("./");
       context.Database.MigrateAsync();
     }
 
     public bool FindTalkMessage(TalkMessage talkMessage)
     {
-      using var context = new EchoglossianDbContext();
+      using var context = new EchoglossianDbContext("./");
       try
       {
         File.AppendAllLines(this.DbPath, new[] { "antes da consulta: ", talkMessage.ToString() });
@@ -61,7 +61,7 @@ namespace EFCoreSqlite
 
     public ToastMessage FindToastMessage(ToastMessage toastMessage)
     {
-      using var context = new EchoglossianDbContext();
+      using var context = new EchoglossianDbContext("./");
       var existingToastMessage =
         context.ToastMessage.Where(t => t.OriginalToastMessage == toastMessage.OriginalToastMessage);
       return existingToastMessage.First().TranslatedToastMessage != null ? existingToastMessage.First() : toastMessage;
@@ -69,7 +69,7 @@ namespace EFCoreSqlite
 
     public BattleTalkMessage FindBattleTalkMessage(BattleTalkMessage battleTalkMessage)
     {
-      using var context = new EchoglossianDbContext();
+      using var context = new EchoglossianDbContext("./");
       var existingBattleTalkMessage =
         context.BattleTalkMessage.Where(t => t.OriginalBattleTalkMessage == battleTalkMessage.OriginalBattleTalkMessage);
       return existingBattleTalkMessage.First().TranslatedBattleTalkMessage != string.Empty ? existingBattleTalkMessage.First() : battleTalkMessage;
@@ -77,7 +77,7 @@ namespace EFCoreSqlite
 
     public string InsertTalkData(TalkMessage talkMessage)
     {
-      using var context = new EchoglossianDbContext();
+      using var context = new EchoglossianDbContext("./");
       try
       {
         File.AppendAllLines(this.DbPath, new[] { "antes de inserir:", talkMessage.SenderName.ToString() });
@@ -105,7 +105,7 @@ namespace EFCoreSqlite
 
     public string InsertBattleTalkData(BattleTalkMessage battleTalkMessage)
     {
-      using var context = new EchoglossianDbContext();
+      using var context = new EchoglossianDbContext("./");
       try
       {
         // 1. Attach an entity to context with Added EntityState
@@ -128,7 +128,7 @@ namespace EFCoreSqlite
 
     public string InsertToastMessageData(ToastMessage toastMessage)
     {
-      using var context = new EchoglossianDbContext();
+      using var context = new EchoglossianDbContext("./");
       try
       {
         // 1. Attach an entity to context with Added EntityState

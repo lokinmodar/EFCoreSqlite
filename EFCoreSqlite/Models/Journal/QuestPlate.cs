@@ -7,7 +7,7 @@ using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Echoglossian.EFCoreSqlite.Models.Journal
+namespace EFCoreSqlite.Models.Journal
 {
   [Table("questplates")]
   public class QuestPlate
