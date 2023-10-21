@@ -27,7 +27,7 @@ namespace EFCoreSqlite
 
     public DbSet<LocationName> QuestPlateMessage { get; set; }
 
-
+    public DbSet<NpcNames> NpcNames { get; set; }
 
     public string DbPath { get; }
 

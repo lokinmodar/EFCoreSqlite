@@ -168,7 +168,49 @@ namespace EFCoreSqlite.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("LocationNames");
+                    b.ToTable("locationnames");
+                });
+
+            modelBuilder.Entity("EFCoreSqlite.Models.NpcNames", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("OriginalNpcName")
+                        .IsRequired()
+                        .HasMaxLength(400)
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("OriginalNpcNameLang")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<byte[]>("RowVersion")
+                        .IsConcurrencyToken()
+                        .ValueGeneratedOnAddOrUpdate()
+                        .HasColumnType("BLOB");
+
+                    b.Property<string>("TranslatedNpcName")
+                        .HasMaxLength(400)
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("TranslationEngine")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("TranslationLang")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime?>("UpdatedDate")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("npcnames");
                 });
 
             modelBuilder.Entity("EFCoreSqlite.Models.TalkMessage", b =>

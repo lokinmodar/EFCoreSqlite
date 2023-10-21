@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace EFCoreSqlite.Migrations
 {
     /// <inheritdoc />
-    public partial class newentities : Migration
+    public partial class EchoglossianDB : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -35,7 +35,7 @@ namespace EFCoreSqlite.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "LocationNames",
+                name: "locationnames",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "INTEGER", nullable: false)
@@ -51,7 +51,27 @@ namespace EFCoreSqlite.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_LocationNames", x => x.Id);
+                    table.PrimaryKey("PK_locationnames", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "npcnames",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    OriginalNpcName = table.Column<string>(type: "TEXT", maxLength: 400, nullable: false),
+                    OriginalNpcNameLang = table.Column<string>(type: "TEXT", nullable: false),
+                    TranslatedNpcName = table.Column<string>(type: "TEXT", maxLength: 400, nullable: true),
+                    TranslationLang = table.Column<string>(type: "TEXT", nullable: false),
+                    TranslationEngine = table.Column<int>(type: "INTEGER", nullable: false),
+                    CreatedDate = table.Column<DateTime>(type: "TEXT", nullable: false),
+                    UpdatedDate = table.Column<DateTime>(type: "TEXT", nullable: true),
+                    RowVersion = table.Column<byte[]>(type: "BLOB", rowVersion: true, nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_npcnames", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -149,7 +169,10 @@ namespace EFCoreSqlite.Migrations
                 name: "battletalkmessages");
 
             migrationBuilder.DropTable(
-                name: "LocationNames");
+                name: "locationnames");
+
+            migrationBuilder.DropTable(
+                name: "npcnames");
 
             migrationBuilder.DropTable(
                 name: "questplates");

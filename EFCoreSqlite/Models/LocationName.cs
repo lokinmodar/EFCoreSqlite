@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace EFCoreSqlite.Models
 {
-  [Table("LocationNames")]
+  [Table("locationnames")]
   public class LocationName
   {
     [Key]
