@@ -9,354 +9,353 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace EFCoreSqlite.Migrations
 {
-    [DbContext(typeof(EchoglossianDbContext))]
-    partial class EchoglossianDbContextModelSnapshot : ModelSnapshot
+  [DbContext(typeof(EchoglossianDbContext))]
+  partial class EchoglossianDbContextModelSnapshot : ModelSnapshot
+  {
+    protected override void BuildModel(ModelBuilder modelBuilder)
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
-        {
 #pragma warning disable 612, 618
-            modelBuilder.HasAnnotation("ProductVersion", "7.0.12");
-
-            modelBuilder.Entity("EFCoreSqlite.Models.BattleTalkMessage", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
-                    b.Property<DateTime>("CreatedDate")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("OriginalBattleTalkMessage")
-                        .IsRequired()
-                        .HasMaxLength(400)
-                        .HasColumnType("TEXT");
+      modelBuilder.HasAnnotation("ProductVersion", "7.0.12");
+
+      modelBuilder.Entity("EFCoreSqlite.Models.BattleTalkMessage", b =>
+          {
+            b.Property<int>("Id")
+                      .ValueGeneratedOnAdd()
+                      .HasColumnType("INTEGER");
+
+            b.Property<DateTime>("CreatedDate")
+                      .HasColumnType("TEXT");
+
+            b.Property<string>("OriginalBattleTalkMessage")
+                      .IsRequired()
+                      .HasMaxLength(400)
+                      .HasColumnType("TEXT");
 
-                    b.Property<string>("OriginalBattleTalkMessageLang")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("OriginalSenderNameLang")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
+            b.Property<string>("OriginalBattleTalkMessageLang")
+                      .IsRequired()
+                      .HasColumnType("TEXT");
+
+            b.Property<string>("OriginalSenderNameLang")
+                      .IsRequired()
+                      .HasColumnType("TEXT");
 
-                    b.Property<byte[]>("RowVersion")
-                        .IsConcurrencyToken()
-                        .ValueGeneratedOnAddOrUpdate()
-                        .HasColumnType("BLOB");
+            b.Property<byte[]>("RowVersion")
+                      .IsConcurrencyToken()
+                      .ValueGeneratedOnAddOrUpdate()
+                      .HasColumnType("BLOB");
 
-                    b.Property<string>("SenderName")
-                        .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("TranslatedBattleTalkMessage")
-                        .HasMaxLength(400)
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("TranslatedSenderName")
-                        .HasMaxLength(100)
-                        .HasColumnType("TEXT");
-
-                    b.Property<int>("TranslationEngine")
-                        .HasColumnType("INTEGER");
+            b.Property<string>("SenderName")
+                      .IsRequired()
+                      .HasMaxLength(100)
+                      .HasColumnType("TEXT");
+
+            b.Property<string>("TranslatedBattleTalkMessage")
+                      .HasMaxLength(400)
+                      .HasColumnType("TEXT");
+
+            b.Property<string>("TranslatedSenderName")
+                      .HasMaxLength(100)
+                      .HasColumnType("TEXT");
+
+            b.Property<int>("TranslationEngine")
+                      .HasColumnType("INTEGER");
 
-                    b.Property<string>("TranslationLang")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
+            b.Property<string>("TranslationLang")
+                      .IsRequired()
+                      .HasColumnType("TEXT");
 
-                    b.Property<DateTime?>("UpdatedDate")
-                        .HasColumnType("TEXT");
+            b.Property<DateTime?>("UpdatedDate")
+                      .HasColumnType("TEXT");
 
-                    b.HasKey("Id");
+            b.HasKey("Id");
 
-                    b.ToTable("battletalkmessages");
-                });
+            b.ToTable("battletalkmessages");
+          });
 
-            modelBuilder.Entity("EFCoreSqlite.Models.Journal.QuestPlate", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
+      modelBuilder.Entity("EFCoreSqlite.Models.Journal.QuestPlate", b =>
+          {
+            b.Property<int>("Id")
+                      .ValueGeneratedOnAdd()
+                      .HasColumnType("INTEGER");
 
-                    b.Property<DateTime>("CreatedDate")
-                        .HasColumnType("TEXT");
+            b.Property<DateTime>("CreatedDate")
+                      .HasColumnType("TEXT");
 
-                    b.Property<string>("OriginalLang")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("OriginalQuestMessage")
-                        .IsRequired()
-                        .HasMaxLength(2500)
-                        .HasColumnType("TEXT");
+            b.Property<string>("OriginalLang")
+                      .IsRequired()
+                      .HasColumnType("TEXT");
 
-                    b.Property<string>("QuestId")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("QuestName")
-                        .IsRequired()
-                        .HasMaxLength(200)
-                        .HasColumnType("TEXT");
+            b.Property<string>("OriginalQuestMessage")
+                      .IsRequired()
+                      .HasMaxLength(2500)
+                      .HasColumnType("TEXT");
 
-                    b.Property<byte[]>("RowVersion")
-                        .IsConcurrencyToken()
-                        .ValueGeneratedOnAddOrUpdate()
-                        .HasColumnType("BLOB");
+            b.Property<string>("QuestId")
+                      .IsRequired()
+                      .HasColumnType("TEXT");
 
-                    b.Property<string>("TranslatedQuestMessage")
-                        .IsRequired()
-                        .HasMaxLength(2500)
-                        .HasColumnType("TEXT");
+            b.Property<string>("QuestName")
+                      .IsRequired()
+                      .HasMaxLength(200)
+                      .HasColumnType("TEXT");
 
-                    b.Property<string>("TranslatedQuestName")
-                        .IsRequired()
-                        .HasMaxLength(200)
-                        .HasColumnType("TEXT");
+            b.Property<byte[]>("RowVersion")
+                      .IsConcurrencyToken()
+                      .ValueGeneratedOnAddOrUpdate()
+                      .HasColumnType("BLOB");
 
-                    b.Property<int>("TranslationEngine")
-                        .HasColumnType("INTEGER");
+            b.Property<string>("TranslatedQuestMessage")
+                      .IsRequired()
+                      .HasMaxLength(2500)
+                      .HasColumnType("TEXT");
 
-                    b.Property<string>("TranslationLang")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
+            b.Property<string>("TranslatedQuestName")
+                      .IsRequired()
+                      .HasMaxLength(200)
+                      .HasColumnType("TEXT");
 
-                    b.Property<DateTime?>("UpdatedDate")
-                        .HasColumnType("TEXT");
+            b.Property<int>("TranslationEngine")
+                      .HasColumnType("INTEGER");
 
-                    b.HasKey("Id");
+            b.Property<string>("TranslationLang")
+                      .IsRequired()
+                      .HasColumnType("TEXT");
 
-                    b.ToTable("questplates");
-                });
+            b.Property<DateTime?>("UpdatedDate")
+                      .HasColumnType("TEXT");
 
-            modelBuilder.Entity("EFCoreSqlite.Models.LocationName", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
+            b.HasKey("Id");
 
-                    b.Property<DateTime>("CreatedDate")
-                        .HasColumnType("TEXT");
+            b.ToTable("questplates");
+          });
 
-                    b.Property<string>("OriginalLocationName")
-                        .IsRequired()
-                        .HasMaxLength(400)
-                        .HasColumnType("TEXT");
+      modelBuilder.Entity("EFCoreSqlite.Models.LocationName", b =>
+          {
+            b.Property<int>("Id")
+                      .ValueGeneratedOnAdd()
+                      .HasColumnType("INTEGER");
 
-                    b.Property<string>("OriginalLocationNameLang")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
+            b.Property<DateTime>("CreatedDate")
+                      .HasColumnType("TEXT");
 
-                    b.Property<byte[]>("RowVersion")
-                        .IsConcurrencyToken()
-                        .ValueGeneratedOnAddOrUpdate()
-                        .HasColumnType("BLOB");
+            b.Property<string>("OriginalLocationName")
+                      .IsRequired()
+                      .HasMaxLength(400)
+                      .HasColumnType("TEXT");
 
-                    b.Property<string>("TranslatedLocationName")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
+            b.Property<string>("OriginalLocationNameLang")
+                      .IsRequired()
+                      .HasColumnType("TEXT");
 
-                    b.Property<int>("TranslationEngine")
-                        .HasColumnType("INTEGER");
+            b.Property<byte[]>("RowVersion")
+                      .IsConcurrencyToken()
+                      .ValueGeneratedOnAddOrUpdate()
+                      .HasColumnType("BLOB");
 
-                    b.Property<string>("TranslationLang")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
+            b.Property<string>("TranslatedLocationName")
+                      .HasColumnType("TEXT");
 
-                    b.Property<DateTime?>("UpdatedDate")
-                        .HasColumnType("TEXT");
+            b.Property<int>("TranslationEngine")
+                      .HasColumnType("INTEGER");
 
-                    b.HasKey("Id");
+            b.Property<string>("TranslationLang")
+                      .IsRequired()
+                      .HasColumnType("TEXT");
 
-                    b.ToTable("locationnames");
-                });
+            b.Property<DateTime?>("UpdatedDate")
+                      .HasColumnType("TEXT");
 
-            modelBuilder.Entity("EFCoreSqlite.Models.NpcNames", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
+            b.HasKey("Id");
 
-                    b.Property<DateTime>("CreatedDate")
-                        .HasColumnType("TEXT");
+            b.ToTable("locationnames");
+          });
 
-                    b.Property<string>("OriginalNpcName")
-                        .IsRequired()
-                        .HasMaxLength(400)
-                        .HasColumnType("TEXT");
+      modelBuilder.Entity("EFCoreSqlite.Models.NpcNames", b =>
+          {
+            b.Property<int>("Id")
+                      .ValueGeneratedOnAdd()
+                      .HasColumnType("INTEGER");
 
-                    b.Property<string>("OriginalNpcNameLang")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
+            b.Property<DateTime>("CreatedDate")
+                      .HasColumnType("TEXT");
 
-                    b.Property<byte[]>("RowVersion")
-                        .IsConcurrencyToken()
-                        .ValueGeneratedOnAddOrUpdate()
-                        .HasColumnType("BLOB");
+            b.Property<string>("OriginalNpcName")
+                      .IsRequired()
+                      .HasMaxLength(400)
+                      .HasColumnType("TEXT");
 
-                    b.Property<string>("TranslatedNpcName")
-                        .HasMaxLength(400)
-                        .HasColumnType("TEXT");
+            b.Property<string>("OriginalNpcNameLang")
+                      .IsRequired()
+                      .HasColumnType("TEXT");
 
-                    b.Property<int>("TranslationEngine")
-                        .HasColumnType("INTEGER");
+            b.Property<byte[]>("RowVersion")
+                      .IsConcurrencyToken()
+                      .ValueGeneratedOnAddOrUpdate()
+                      .HasColumnType("BLOB");
 
-                    b.Property<string>("TranslationLang")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
+            b.Property<string>("TranslatedNpcName")
+                      .HasMaxLength(400)
+                      .HasColumnType("TEXT");
 
-                    b.Property<DateTime?>("UpdatedDate")
-                        .HasColumnType("TEXT");
+            b.Property<int>("TranslationEngine")
+                      .HasColumnType("INTEGER");
 
-                    b.HasKey("Id");
+            b.Property<string>("TranslationLang")
+                      .IsRequired()
+                      .HasColumnType("TEXT");
 
-                    b.ToTable("npcnames");
-                });
+            b.Property<DateTime?>("UpdatedDate")
+                      .HasColumnType("TEXT");
 
-            modelBuilder.Entity("EFCoreSqlite.Models.TalkMessage", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
+            b.HasKey("Id");
 
-                    b.Property<DateTime>("CreatedDate")
-                        .HasColumnType("TEXT");
+            b.ToTable("npcnames");
+          });
 
-                    b.Property<string>("OriginalSenderNameLang")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
+      modelBuilder.Entity("EFCoreSqlite.Models.TalkMessage", b =>
+          {
+            b.Property<int>("Id")
+                      .ValueGeneratedOnAdd()
+                      .HasColumnType("INTEGER");
 
-                    b.Property<string>("OriginalTalkMessage")
-                        .IsRequired()
-                        .HasMaxLength(400)
-                        .HasColumnType("TEXT");
+            b.Property<DateTime>("CreatedDate")
+                      .HasColumnType("TEXT");
 
-                    b.Property<string>("OriginalTalkMessageLang")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
+            b.Property<string>("OriginalSenderNameLang")
+                      .IsRequired()
+                      .HasColumnType("TEXT");
 
-                    b.Property<byte[]>("RowVersion")
-                        .IsConcurrencyToken()
-                        .ValueGeneratedOnAddOrUpdate()
-                        .HasColumnType("BLOB");
+            b.Property<string>("OriginalTalkMessage")
+                      .IsRequired()
+                      .HasMaxLength(400)
+                      .HasColumnType("TEXT");
 
-                    b.Property<string>("SenderName")
-                        .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("TEXT");
+            b.Property<string>("OriginalTalkMessageLang")
+                      .IsRequired()
+                      .HasColumnType("TEXT");
 
-                    b.Property<string>("TranslatedSenderName")
-                        .HasMaxLength(100)
-                        .HasColumnType("TEXT");
+            b.Property<byte[]>("RowVersion")
+                      .IsConcurrencyToken()
+                      .ValueGeneratedOnAddOrUpdate()
+                      .HasColumnType("BLOB");
 
-                    b.Property<string>("TranslatedTalkMessage")
-                        .HasMaxLength(400)
-                        .HasColumnType("TEXT");
+            b.Property<string>("SenderName")
+                      .IsRequired()
+                      .HasMaxLength(100)
+                      .HasColumnType("TEXT");
 
-                    b.Property<int>("TranslationEngine")
-                        .HasColumnType("INTEGER");
+            b.Property<string>("TranslatedSenderName")
+                      .HasMaxLength(100)
+                      .HasColumnType("TEXT");
 
-                    b.Property<string>("TranslationLang")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
+            b.Property<string>("TranslatedTalkMessage")
+                      .HasMaxLength(400)
+                      .HasColumnType("TEXT");
 
-                    b.Property<DateTime?>("UpdatedDate")
-                        .HasColumnType("TEXT");
+            b.Property<int>("TranslationEngine")
+                      .HasColumnType("INTEGER");
 
-                    b.HasKey("Id");
+            b.Property<string>("TranslationLang")
+                      .IsRequired()
+                      .HasColumnType("TEXT");
 
-                    b.ToTable("talkmessages");
-                });
+            b.Property<DateTime?>("UpdatedDate")
+                      .HasColumnType("TEXT");
 
-            modelBuilder.Entity("EFCoreSqlite.Models.TalkSubtitleMessage", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
+            b.HasKey("Id");
 
-                    b.Property<DateTime>("CreatedDate")
-                        .HasColumnType("TEXT");
+            b.ToTable("talkmessages");
+          });
 
-                    b.Property<string>("OriginalTalkSubtitleMessage")
-                        .IsRequired()
-                        .HasMaxLength(400)
-                        .HasColumnType("TEXT");
+      modelBuilder.Entity("EFCoreSqlite.Models.TalkSubtitleMessage", b =>
+          {
+            b.Property<int>("Id")
+                      .ValueGeneratedOnAdd()
+                      .HasColumnType("INTEGER");
 
-                    b.Property<string>("OriginalTalkSubtitleMessageLang")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
+            b.Property<DateTime>("CreatedDate")
+                      .HasColumnType("TEXT");
 
-                    b.Property<byte[]>("RowVersion")
-                        .IsConcurrencyToken()
-                        .ValueGeneratedOnAddOrUpdate()
-                        .HasColumnType("BLOB");
+            b.Property<string>("OriginalTalkSubtitleMessage")
+                      .IsRequired()
+                      .HasMaxLength(400)
+                      .HasColumnType("TEXT");
 
-                    b.Property<string>("TranslatedTalkSubtitleMessage")
-                        .HasMaxLength(400)
-                        .HasColumnType("TEXT");
+            b.Property<string>("OriginalTalkSubtitleMessageLang")
+                      .IsRequired()
+                      .HasColumnType("TEXT");
 
-                    b.Property<int>("TranslationEngine")
-                        .HasColumnType("INTEGER");
+            b.Property<byte[]>("RowVersion")
+                      .IsConcurrencyToken()
+                      .ValueGeneratedOnAddOrUpdate()
+                      .HasColumnType("BLOB");
 
-                    b.Property<string>("TranslationLang")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
+            b.Property<string>("TranslatedTalkSubtitleMessage")
+                      .HasMaxLength(400)
+                      .HasColumnType("TEXT");
 
-                    b.Property<DateTime?>("UpdatedDate")
-                        .HasColumnType("TEXT");
+            b.Property<int>("TranslationEngine")
+                      .HasColumnType("INTEGER");
 
-                    b.HasKey("Id");
+            b.Property<string>("TranslationLang")
+                      .IsRequired()
+                      .HasColumnType("TEXT");
 
-                    b.ToTable("talksubtitlemessages");
-                });
+            b.Property<DateTime?>("UpdatedDate")
+                      .HasColumnType("TEXT");
 
-            modelBuilder.Entity("EFCoreSqlite.Models.ToastMessage", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
+            b.HasKey("Id");
 
-                    b.Property<DateTime>("CreatedDate")
-                        .HasColumnType("TEXT");
+            b.ToTable("talksubtitlemessages");
+          });
 
-                    b.Property<string>("OriginalLang")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
+      modelBuilder.Entity("EFCoreSqlite.Models.ToastMessage", b =>
+          {
+            b.Property<int>("Id")
+                      .ValueGeneratedOnAdd()
+                      .HasColumnType("INTEGER");
 
-                    b.Property<string>("OriginalToastMessage")
-                        .IsRequired()
-                        .HasMaxLength(200)
-                        .HasColumnType("TEXT");
+            b.Property<DateTime>("CreatedDate")
+                      .HasColumnType("TEXT");
 
-                    b.Property<byte[]>("RowVersion")
-                        .IsConcurrencyToken()
-                        .ValueGeneratedOnAddOrUpdate()
-                        .HasColumnType("BLOB");
+            b.Property<string>("OriginalLang")
+                      .IsRequired()
+                      .HasColumnType("TEXT");
 
-                    b.Property<string>("ToastType")
-                        .IsRequired()
-                        .HasMaxLength(40)
-                        .HasColumnType("TEXT");
+            b.Property<string>("OriginalToastMessage")
+                      .IsRequired()
+                      .HasMaxLength(200)
+                      .HasColumnType("TEXT");
 
-                    b.Property<string>("TranslatedToastMessage")
-                        .HasMaxLength(200)
-                        .HasColumnType("TEXT");
+            b.Property<byte[]>("RowVersion")
+                      .IsConcurrencyToken()
+                      .ValueGeneratedOnAddOrUpdate()
+                      .HasColumnType("BLOB");
 
-                    b.Property<int>("TranslationEngine")
-                        .HasColumnType("INTEGER");
+            b.Property<string>("ToastType")
+                      .IsRequired()
+                      .HasMaxLength(40)
+                      .HasColumnType("TEXT");
 
-                    b.Property<string>("TranslationLang")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
+            b.Property<string>("TranslatedToastMessage")
+                      .HasMaxLength(200)
+                      .HasColumnType("TEXT");
 
-                    b.Property<DateTime?>("UpdatedDate")
-                        .HasColumnType("TEXT");
+            b.Property<int>("TranslationEngine")
+                      .HasColumnType("INTEGER");
 
-                    b.HasKey("Id");
+            b.Property<string>("TranslationLang")
+                      .IsRequired()
+                      .HasColumnType("TEXT");
 
-                    b.ToTable("toastmessages");
-                });
+            b.Property<DateTime?>("UpdatedDate")
+                      .HasColumnType("TEXT");
+
+            b.HasKey("Id");
+
+            b.ToTable("toastmessages");
+          });
 #pragma warning restore 612, 618
-        }
     }
+  }
 }

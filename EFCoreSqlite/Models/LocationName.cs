@@ -21,7 +21,6 @@ namespace EFCoreSqlite.Models
     [Required]
     public string OriginalLocationNameLang { get; set; }
 
-    [Required]
     public string TranslatedLocationName { get; set; }
 
     [Required]

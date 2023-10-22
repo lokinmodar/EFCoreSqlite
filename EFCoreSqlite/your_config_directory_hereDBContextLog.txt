@@ -88,3 +88,9 @@ dbug: 21/10/2023 17:55:47.897 CoreEventId.ContextInitialized[10403] (Microsoft.E
       Entity Framework Core 7.0.12 initialized 'EchoglossianDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:7.0.12' with options: SensitiveDataLoggingEnabled DetailedErrorsEnabled 
 dbug: 21/10/2023 17:55:48.134 CoreEventId.ContextDisposed[10407] (Microsoft.EntityFrameworkCore.Infrastructure) 
       'EchoglossianDbContext' disposed.
+warn: 21/10/2023 21:21:26.965 CoreEventId.SensitiveDataLoggingEnabledWarning[10400] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+dbug: 21/10/2023 21:21:27.097 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 7.0.12 initialized 'EchoglossianDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:7.0.12' with options: SensitiveDataLoggingEnabled DetailedErrorsEnabled 
+dbug: 21/10/2023 21:21:27.281 CoreEventId.ContextDisposed[10407] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      'EchoglossianDbContext' disposed.

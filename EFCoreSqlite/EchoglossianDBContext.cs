@@ -29,6 +29,8 @@ namespace EFCoreSqlite
 
     public DbSet<NpcNames> NpcNames { get; set; }
 
+    public DbSet<LocationName> LocationName { get; set; }
+
     public string DbPath { get; }
 
 #if DEBUG

@@ -1356,7 +1356,7 @@
     "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
-    "version": "0.0.2310.1256",
+    "version": "0.0.2310.21",
     "restore": {
       "projectUniqueName": "I:\\Dante\\tataru-to-dalamud\\EFCoreSqLite\\EFCoreSqlite\\EFCoreSqlite\\EFCoreSqlite.csproj",
       "projectName": "EFCoreSqlite",
